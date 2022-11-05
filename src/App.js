@@ -1,24 +1,26 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
 import {
-  BrowserRouter ,
+  BrowserRouter,
   Route,
   Routes
-} from "react-router-dom";
-import Nav from './Nav.jsx';
-import About from './About.jsx';
-import Product from './Product.jsx';
+} from 'react-router-dom';
+import Nav from './Nav';
+import Product from './Product';
+import Post from './Post';
+import About from './About';
 
-export default function App() {
-  return (
-    <div>
+const App = () =>{
+  return(
+    <div className="container">
       <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<About />}/>
-        <Route path="/product" element={<Product />}/>
-      </Routes>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Product />}/>
+          <Route path="/post" element={<Post/>}/>
+          <Route path="/About" element={<About/>}/>
+        </Routes>
       </BrowserRouter>
     </div>
-  );
+  )
 }
+export default App;

@@ -1,15 +1,16 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import {Link,NavLink} from 'react-router-dom';
 
 const Nav = () =>{
   return(
-    <nav>
-      <h1>SurfeBee</h1>
+    <div>
+      <h1>Logo</h1>
       <div>
-        <Link to="/">About</Link>
-        <Link to="/product">Product</Link>
+        <Link to="/">Product</Link>
+        <Link to="/post">Post</Link>
+        <Link to="/about">About</Link>
       </div>
-    </nav>
+    </div>
   )
-} 
+}
 export default Nav;
